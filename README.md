@@ -1,6 +1,7 @@
 # The Self-Pruning Neural Network — Report
 
 **Tredence AI Engineering Internship — Case Study Submission**
+** Live Demo: https://the-self-pruning-neural-network.vercel.app/ **
 
 ---
 
