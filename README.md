@@ -1,8 +1,6 @@
 # The Self-Pruning Neural Network — Report
 
 **Tredence AI Engineering Internship — Case Study Submission**
-**Author:** Harish S | M.Tech CSE (AI & ML), VIT Chennai
-**GitHub:** *(add your repo link here)*
 
 ---
 
