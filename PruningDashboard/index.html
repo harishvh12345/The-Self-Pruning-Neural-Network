@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Pruning Network Explorer</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Self-Pruning Network Dashboard</h1>
+            <p>Explore the Accuracy vs. Sparsity trade-off interactively</p>
+        </header>
+
+        <section class="controls glass-panel">
+            <div class="slider-container">
+                <div class="slider-header">
+                    <label for="lambda-slider">Sparsity Coefficient (λ)</label>
+                    <span id="lambda-value">1e-5</span>
+                </div>
+                <input type="range" id="lambda-slider" min="0" max="2" value="0" step="1">
+                <div class="slider-labels">
+                    <span>Low Sparsity</span>
+                    <span>Balanced</span>
+                    <span>High Sparsity</span>
+                </div>
+            </div>
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Accuracy</h3>
+                    <div id="acc-value" class="stat-value">--%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Sparsity</h3>
+                    <div id="sparsity-value" class="stat-value">--%</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <section class="charts-column">
+                <div class="glass-panel chart-container">
+                    <h2>Accuracy vs Sparsity</h2>
+                    <canvas id="tradeoffChart"></canvas>
+                </div>
+                <div class="glass-panel chart-container">
+                    <h2>Gate Value Distribution</h2>
+                    <canvas id="histogramChart"></canvas>
+                </div>
+            </section>
+            
+            <section class="network-column">
+                <div class="glass-panel network-container">
+                    <h2>Network Pruning Visualizer</h2>
+                    <p class="subtitle">Neurons fading out based on layer sparsity</p>
+                    <canvas id="networkCanvas"></canvas>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
