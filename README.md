@@ -149,7 +149,9 @@ python self_pruning_network.py
 * Outputs:
 ![gate_distribution](gate_distribution.png)
 ![lambda_tradeoff](lambda_tradeoff.png)
-
+![low_lambda](image.png)
+![balanced_lambda](image-1.png)
+![high_lambda](image-2.png)
 ---
 
 ## 6. Final Conclusion
