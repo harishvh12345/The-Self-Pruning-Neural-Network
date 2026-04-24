@@ -92,7 +92,7 @@ Experiments were run for 30 epochs on CIFAR-10 using Adam optimizer and cosine l
 * **Low λ → High accuracy, low sparsity**
 * **High λ → High sparsity, low accuracy**
 
-👉 Best trade-off:
+Best trade-off:
 
 > λ = 1e-4 → good compression without major accuracy loss
 
@@ -104,13 +104,13 @@ The `gate_distribution.png` shows how gate values are distributed.
 
 ### What we observe:
 
-* 🔵 Large spike near **0**
+*  Large spike near **0**
   → These connections are effectively **pruned**
 
-* 🟢 Cluster near **0.5 – 1**
+*  Cluster near **0.5 – 1**
   → These are **important weights**
 
-* ⚪ Very few values in the middle
+*  Very few values in the middle
   → Indicates **clear decision-making**
 
 ---
@@ -163,7 +163,7 @@ This approach demonstrates that:
   * Model performance
   * Model efficiency
 
-👉 The model does not just learn **what to predict**,
+The model does not just learn **what to predict**,
 but also **what not to use**.
 
 ---
